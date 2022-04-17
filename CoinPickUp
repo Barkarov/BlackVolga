@@ -1,0 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CoinPickUp : MonoBehaviour
+{
+    public Text coinsCount;
+    void Start()
+    {
+        coinsCount = GameObject.Find("CoinsCount").GetComponent<Text>();
+    }
+
+    
+    void OnTriggerEnter(Collider coinCollider)
+    {
+        if(coinCollider.name == "car_6_black") 
+        {
+            coinsCount.text = (int.Parse(coinsCount.text) + 1).ToString();
+            Destroy(gameObject);
+        }
+    }
+        
+}
