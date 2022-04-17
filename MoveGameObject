@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MoveGameObject : MonoBehaviour
+{
+    public Vector3 moveVector;
+
+    public float speed;
+
+    public float TimeBeforDestroy;
+
+    void Start()
+    {
+        Destroy(gameObject, TimeBeforDestroy);
+    }
+
+    void Update()
+    {
+        transform.Translate(moveVector * Time.deltaTime * speed);
+    }
+}
