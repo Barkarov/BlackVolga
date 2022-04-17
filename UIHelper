@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class UIHelper : MonoBehaviour
+{
+   public void RestartButton()
+    
+    {
+        Application.LoadLevel("CarRide");
+    }
+
+    
+    public void ExitButton()
+    {
+        Application.Quit();
+    }
+}
